@@ -1,0 +1,29 @@
+
+h1 {
+    color: #20C20E;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    color:#20C20E;
+}
+
+.mainimage {
+    width: 30%;
+    height: auto;
+}
+
+.lightblue {
+    color:lightblue;
+}
+
+.lightpink {
+    color:lightpink;
+}
+
+.lightgoldenrodyellow {
+    color: lightgoldenrodyellow;
+}
