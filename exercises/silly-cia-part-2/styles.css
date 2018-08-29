@@ -1,0 +1,44 @@
+header {
+    color: darkgreen;
+}
+
+.headers {
+    font-family: Georgia;
+    text-align: center;
+}
+
+body {
+    width: 760px;
+}
+
+p {
+    line-height: 25px;
+    font-size: 15pt;
+}
+
+ul {
+    font-size: 15pt
+}
+.mainimg {
+    float: left;
+    height: 231px;
+    max-width: 126%;
+    padding: 15px
+    
+}
+
+a {
+    font-size:15pt;
+}
+
+a:link {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration-line: underline
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
