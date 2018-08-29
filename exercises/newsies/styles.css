@@ -1,0 +1,32 @@
+h1 {
+    font-size: 10em;
+}
+
+body {
+    border-top: 2px double black;
+    background-color: lightslategray;
+    width:1080px
+}
+
+#mainimg {
+    width:10%;
+    height:auto;
+}
+
+#left-column {
+    column-count: 1;
+    column-width: 25%;
+    float: left
+}
+
+#middle-column {
+    column-count: 1;
+    column-width: 50%;
+    float: center
+}
+
+#right-column {
+    column-count: 1;
+    column-width: 25%;
+    float: right
+}
