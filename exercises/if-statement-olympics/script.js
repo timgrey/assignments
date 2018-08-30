@@ -19,8 +19,19 @@ var person = {
 
 
 //Bronze
+if (person.age >= 12) {
+    console.log( person.name + " is allowed to go to the movie.")
+} else {
+    console.log( person.name + " is not allowed to go to the movie.")
+}
 
-if (person.age >= 12 && person.name[0] ==="B") {
+if (person.name[0] === "B") {
+    console.log( person.name + " is allowed to go to the movie.")
+} else {
+    console.log( person.name + " is not allowed to go to the movie.")
+}
+
+if (person.age >= 12 && person.name[0] === "B") {
     console.log( person.name + " is allowed to go to the movie.")
 } else {
     console.log( person.name + " is not allowed to go to the movie.")
