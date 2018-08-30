@@ -1,32 +1,32 @@
 h1 {
-    font-size: 10em;
+    font-size: 6em;
+    color: red;
 }
 
 body {
     border-top: 2px double black;
-    background-color: lightslategray;
-    width:1080px
+    width:1200px;
 }
 
 #mainimg {
-    width:10%;
+    width:600px;
     height:auto;
 }
 
 #left-column {
-    column-count: 1;
-    column-width: 25%;
-    float: left
+    width: 300px;
+    display:inline-block;
+    
 }
 
-#middle-column {
-    column-count: 1;
-    column-width: 50%;
-    float: center
+#center-column {
+    width: 600px;
+    display:inline-block;
+    
 }
 
 #right-column {
-    column-count: 1;
-    column-width: 25%;
-    float: right
+    width: 300px;
+    display:inline-block;
+   
 }
