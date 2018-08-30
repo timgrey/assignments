@@ -9,7 +9,7 @@ if ( "cat".length === 3) {
 if ( "cat" === "dog" ) {
     console.log("they are equal")
 } else if ("cat" !== "dog") {
-    console.log("they are not equal")
+    console.log("not the same")
 }
 
 var person = {
