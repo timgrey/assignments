@@ -3,53 +3,37 @@
     margin: 0;
     font-size: 0;
 }
-
 div {
     border: 5px solid white;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
 }
-
 #container {
     width: 100vw;
     height: 100vh;
+    border: 5px solid white;
 }
-
 .row {
-    width: 100%;
     height: 25%;
-    border:none;
- 
+    border: none;
 }
-
-.pink-box {
-    width: 100%;
-    height: 100%;
+.pink {
     background-color: #F5C6D6;
 }
-
-.red-box {
+.red {
     width: 25%;
-    height: 100%;
     background-color: #EE2E84;
-    display: inline-block;
 }
-
-.blue-box {
+.blue {
     width: 50%;
-    height: 100%;
     background-color: #85CFD8;
-    display: inline-block;
 }
-
-.green-box {
+.green {
     width: 75%;
-    height: 100%;
     background-color: #8DC63F;
-    display: inline-block;
 }
-
-.orange-box {
+.orange {
     width: 25%;
-    height: 100%;
     background-color: #E76E34;
-    display: inline-block;
 }
