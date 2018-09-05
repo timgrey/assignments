@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.red {
+    height: 100vw;
+    width: 100vw;
+    position: fixed;
+    background-color: red;
+}
+
+.blue {
+    height: 100vw;
+    width: 33vw;
+    z-index: 2;
+    background-color: blue;
+    position: absolute;
+}
+
+.white {
+    height: 100vw;
+    width: 33vw;
+    z-index: 2;
+    background-color: whitesmoke;
+    position: relative;
+    left: 33%
+}

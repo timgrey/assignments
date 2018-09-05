@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.flag {
+    height: 400px;
+    width: 600px;
+    position: fixed;
+    background-color: cornflowerblue
+}
+
+.stripe {
+    height: 11.11%;
+    z-index: 2;
+    background-color: whitesmoke;
+}
+
+
+
+.very-short {
+    width: 33.33%;
+}
+.short{
+    width: 66.66%;
+}
+.long {
+    width: 100%;
+}
+.vertical {
+    height: 33.3%;
+    width: 3.5%;
+    z-index: 2;
+    background-color: whitesmoke;
+}
+
+
+
+.one {
+    position: relative;
+    top: 11.11%;
+    right: 0px;
+    transform: translateX(50%);
+}
+.two {
+    position: relative;
+    right: 0%;
+    top: 22.22%;
+    transform: translateX(50%);
+}
+.three {
+    position: relative;
+    right: 0%;
+    top: 33.33%
+}
+.four {
+    position: relative;
+    right: 0%;
+    top: 44.44%;
+}
+.five {
+    position: relative;
+    top: 11.11%;
+    transform: translateY(-300%);
+}
+.six {
+    position: relative;
+    top: 0%;
+}

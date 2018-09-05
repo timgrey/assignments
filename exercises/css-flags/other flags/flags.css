@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 0;
+}
+div {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+#container {
+    height: 100vh;
+    border: 5px solid white;
+}
+
+.flag {
+    border: 5px solid white;
+    height: 33%;
+    width: 25%;
+}
+.row {
+    height: 33%;
+    border: none;
+}
+
+.row5per {
+    height: 5%
+}
+.row15per {
+    height: 20%
+}
+
+/* Colors */
+
+.darkgreen {
+    width: 33%;
+    background-color: darkgreen;
+}
+.darkblue {
+    width: 33%;
+    background-color: darkblue;
+}
+.darkred {
+    width: 33%;
+    background-color: darkred;
+}
+.white {
+    width: 33%;
+    background-color: whitesmoke;
+}
+.red {
+    width: 33%;
+    background-color: red;
+}
+.blue {
+    width: 33%;
+    background-color: blue;
+}
+.green {
+    width: 33%;
+    background-color: green;
+}
+.orange {
+    width: 33%;
+    background-color: orange;
+}
+.yellow {
+    width: 33%;
+    background-color: yellow;
+}
+.black {
+    width: 33%;
+    background-color: black;
+}
+.steelblue {
+    width: 33%;
+    background-color:steelblue
+
+/* FLAG IDS */
+
+}
+#madagascar .row {
+    height: 50%;
+}
+#switzerland .row {
+    height: 20%;
+    width: 66%;
+}
+#switzerland .row .red {
+    width: 20%;
+}
+#switzerland .row .white {
+    width: 20%;
+}
+#sweden .row {
+    height: 20%;
+}
+#sweden .row .steelblue {
+    width: 11%;
+}
+#sweden .row .yellow {
+    width: 11%;
+}

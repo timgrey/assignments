@@ -1,0 +1,44 @@
+* {
+    margin:auto;
+    box-sizing: border-box;
+}
+
+div {
+    width: 800px;
+    line-height: 1.5;
+    display: block;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    width:60%;
+    float: left;
+    padding: 10px;
+}
+
+.nav {
+    background-color: blanchedalmond;
+    position: fixed;
+    top: 0px;
+    height: 70px;
+    text-align: center;
+}
+
+.button {
+    width: 200px;
+    color: red;
+    display: inline-block;
+}
+
+.blog {
+    position: relative;
+    top: -30px;
+}
+
+
+.post {
+    background-color: lightblue;
+}
