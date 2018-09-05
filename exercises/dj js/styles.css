@@ -1,0 +1,14 @@
+* {
+    margin: auto;
+}
+body {
+    padding-top: 200px;
+    width:400px;
+    background-color: azure;
+
+}
+button {
+    padding: 100px;
+    width:400px;
+    height:400px;
+}
