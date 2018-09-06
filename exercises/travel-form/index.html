@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="travel-form">
+        <h1>Jupiter Airlines Travel Form</h1><br>
+        <form id="travel-form">
+            <label for="">First Name:</label>
+            <input type="text" name="firstname" required><br><br>
+
+            <label for="">Last Name:</label>
+            <input type="text" name="lastname" required><br><br>
+
+            <label for="">Age:</label>
+            <input type="text" name="age" required><br><br>
+
+            <label for=""><b>Gender:  </b></label>
+            Male <input value="Male" type="radio" name="gender" required>
+            Female <input value="Female" type="radio" name="gender" required><br><br>
+
+            <label for="">Location:</label>
+            <select name="location">
+                <option value="Titan">Titan</option>
+                <option value="IO">IO</option>
+                <option value="Europa">Europa</option>
+            </select><br><br>
+
+            <label for=""><b>Dietary Restrictions:</b></label><br>
+            None <input type="checkbox" name="diet" value="none">
+            Vegan <input type="checkbox" name="diet" value="vegan"><br>
+            Vegatarian <input type="checkbox" name="diet" value="vegatarian">
+            Kosher <input type="checkbox" name="diet" value="kosher"><br><br>
+
+            <button>Submit</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    box-sizing: border-box
+}
+
+body {
+    background-color: mediumturquoise;
+    padding-top:75px;
+}
+
+.travel-form {
+    padding:5px;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    background-color: azure;
+    border-radius: 15%;
+    box-shadow: 5px 5px salmon
+}
+
+h1 {
+    padding: 10px
+}
+
+form {
+    margin: auto;
+
+}
+
+button {
+    font-size: 2em;
+    border-radius: 5%;
+    border: 1px solid salmon;
+    width: 5em;
+    height: 1.6em;
+    background-color: lightblue
+}
