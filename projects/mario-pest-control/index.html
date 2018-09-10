@@ -1,0 +1,66 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mario's Pest Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+</head>
+<body>
+    <h1>Mario's Pest Control</h1>
+    <div class="main-content">
+    <form id="form">
+        <div class="bad-guys-wrapper">
+            
+            <div class="baddies">
+                <div class="baddie-info">
+                    <img class="goomba" src="./goomba.png">
+                    <h2 class="goomba-text">= 5 Coins</h2>
+                </div>
+                <div id="goomba-form">
+                    <label>Quanity:</label>
+                    <input type="text" name="goomba" required>
+                </div>
+            </div>
+
+            <div class="baddies">
+                <div class="baddie-info">
+                    <img class="bob-omb" src="./bob-omb.png">
+                    <h2 class="bob-omb-text">= 7 Coins</h2>
+                </div>
+                <div id="bob-omb-form">
+                    <label>Quanity:</label>
+                    <input type="text" name="bomb" required>
+                </div>
+            </div>
+
+            <div class="baddies">
+                <div class="baddie-info">
+                    <img class="cheep-cheep" src="./cheep-cheep.png">
+                    <h2 class="cheep-cheep-text">= 11 Coins</h2>
+                </div>
+                <div id="cheep-cheep-form">
+                    <label>Quanity:</label>
+                    <input type="text" name="cheep" required>
+                </div>
+            </div>
+
+        </div>
+        <div class="calculator">
+            <button>Calculate</button>
+            <div class="output">
+                <div>Total Coins:</div>
+                <div id="output">0</div>
+            </div>
+        </div>
+    </form>
+    </div>
+    <div class="footer">
+        <div><a href="">  www.mariospestcontrol.com  </a></div>
+        <div class="email">  mario@mariospestcontrol.com  </div>
+        <div class="address">  1983 Plumber Ln, SLC, UT 84111  </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

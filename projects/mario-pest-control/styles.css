@@ -1,0 +1,157 @@
+body {
+    margin:0;
+    box-sizing: border-box;
+    background: black;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    background-image:url('./mario-enemies.png');
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+
+
+h1 {
+    text-shadow: 3px 3px black;
+    font-size: 30pt;
+    line-height: 30%;
+}
+
+.main-content {
+    width: 80vw;
+    height: 80vh;
+    background:rgba(240,240,240,90%);
+    border-radius: 1%;
+    color:black;
+}
+.baddies {
+    width: 100%;
+    height: 30%;
+    background:rgba(138, 138, 138, 0.384);
+    border:1px solid black;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+.baddie-info {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+.baddies img{
+    width: auto;
+    height:120px
+}
+h2 {
+    color: yellow;
+    text-shadow: 1px 1px black;
+}
+.goomba-text {
+    margin-left:-20px;
+}
+.bob-omb-text {
+    margin-left:12px;
+}
+.cheep-cheep-text {
+    margin-left:10px;
+}
+
+
+.calculator {
+    margin-top:15px;
+    font-size: 15pt;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center;
+}
+button {
+    font-size:15pt;
+    border:3px solid yellow;
+    border-radius: 4%;
+    background:lightcoral;
+}
+#output {
+    margin-left: 5px;
+}
+.output {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/*FOOTER*/
+.footer {
+    height: 10%;
+    width: 80vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+a {
+    color: lightgreen;
+}
+.footer .email {
+    color: lightcoral;
+}
+.footer .address {
+    font-size: .9em;
+    color: lightblue;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .footer {
+        flex-direction:row;
+        justify-content:space space-around;
+        width:700px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .main-content {
+        height: 50vh;
+        width: 1000px;
+    }
+    .baddies {
+        width: 30%;
+        height: 300px;
+        align-items:center;
+    }
+    .bad-guys-wrapper {
+        margin-top:25px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+    label {
+        font-size: 1.4em;
+    }
+    .baddies img {
+        width: auto;
+        height:170px
+    }
+    .calculator {
+        margin-top:50px;
+        font-size: 1.8em;
+    }
+    button {
+        font-size: .9em;
+    }
+    h1 {
+        font-size: 50pt;
+    }
+}
