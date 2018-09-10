@@ -23,7 +23,7 @@ h1 {
 }
 
 .main-content {
-    width: 80vw;
+    width: 300px;
     height: 80vh;
     background:rgba(240,240,240,90%);
     border-radius: 1%;
