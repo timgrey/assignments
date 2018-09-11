@@ -1,0 +1,82 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+    font-family: SuperMarioGalaxy;
+}
+
+body {
+    margin:auto;
+    display:flex;
+    widows: 90%;
+    flex-direction: column;
+    height:100vh;
+
+}
+.header {
+    height: 60px;
+    background:yellow;
+    display:flex;
+    /* flex-direction:column; */  
+}
+h1 {
+    width: 85%;
+    margin: auto;
+    color: red;
+}
+
+.logo {
+    margin:auto;
+    width:100vw;
+    height:50%;
+    background:red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    height: 80%;
+    width: auto;
+}
+
+
+.about {
+    color:red;
+    height:33vh;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+}
+h2 {
+    font-size:3em;
+}
+p {
+    padding:10px;
+    font-size: 1.7em;
+    width: 350px;
+    height: 70%
+}
+
+.footer {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    height:60px;
+    background: yellow;
+
+}
+.footer img{
+    height:80%;
+    width:auto;
+    margin-right:10px;
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 2.4em;
+    }
+} 
