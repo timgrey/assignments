@@ -126,19 +126,6 @@ console.log("\n\t*******************************\n\t*** Welcome to Escape Room! 
 console.log("\n\t\t You are in a room with locked door somewhere on the wall.\n ")
 console.log("\tIn this room there is a key that you must find to unlock this hidden door.\n ")
 console.log("\tAll you have with you is a strange map that shows you were you are in the room")
-
-// console.log("\nmax X value: " + maxX)
-// console.log("max Y value: " + maxY)
-// console.log("\nDo i have a key?: " + haveKey)
-// console.log("\nMy X Location value: " + myX)
-// console.log("My X Location value: " + myY)
-// console.log("\nHole X Location value: " + holeX)
-// console.log("Hole Y Location value: " + holeY)
-// console.log("\nDoor X Location value: " + doorX)
-// console.log("Door Y Location value: " + doorY)
-// console.log("\nKey X Location value: " + keyX)
-// console.log("Key Y Location value: " + keyY)
-
 console.log("\n*********************************************************\n")
 
 while (doorLocked) {
