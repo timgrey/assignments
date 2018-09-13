@@ -1,0 +1,326 @@
+* {
+    background: whitesmoke;
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.4s;
+}
+
+.body-wrapper {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu {
+    background:rgba(0, 0, 0, 0);
+    font:whitesmoke;
+    height: 100%;
+    width: 100%;
+    font-size: 0;
+    bottom: 40px;
+    right:100%;
+    left:100%;
+    position: absolute;
+    transition: 0.4s;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    position: absolute;
+    transition:none;
+    color:whitesmoke;
+    background:rgba(0, 0, 0, 0);
+    padding: 25px;
+    text-decoration: none;
+}
+
+.change #about-us {
+    transform: translateY(70px);
+    z-index:5;
+}
+
+.change #our-locations {
+    transform: translateY(-70px);
+    z-index:5;
+}
+
+.change #what-we-serve {
+    z-index:5;
+}
+
+/* #our-locations 
+#what-we-serve 
+#about-us */
+
+.change .menu {
+    font-size:32;
+    background:rgba(0, 0, 0, 0.774);
+    z-index:-1;
+    right:0%;
+    left:0%;
+}
+
+.collapsible-menu {
+    margin-left:10px;
+    margin-top: 20px;
+    width:35px;
+    height:35px;
+    z-index: 3;
+}
+
+/* HEADER */
+.header {
+   
+    height:25%;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.menu-button {
+    background:rgba(0, 0, 0, 0);
+}
+
+.logo {
+    transition: 0.4s;
+    margin:auto;
+    font-family: 'Pacifico', cursive;
+    color:#333;
+    font-size: 60;
+}
+
+.home {
+    background: url(./pics/home.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width:35px;
+    height:35px;
+    margin-right:10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.home span {
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+    background: none;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display:flex;
+    height: 60%;
+}
+
+.methods {
+    display:flex;
+    flex-direction:column;
+    height: 60%;
+}
+
+.img1 {
+    background: url(./pics/coffee-grounds.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.img2 {
+    width: 1000px;
+    background: url(./pics/pour-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.img3 {
+    background: url(./pics/coffee-berries.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-us {
+    width: 1000px;
+    background: whitesmoke;
+    font:#333;
+    font-size:30;
+    padding:30px;
+}
+
+.chemex {
+    color: whitesmoke;
+    text-align: center;
+    padding:10px;
+    font-size: 35px;
+    font-family: 'Pacifico', cursive;
+    width:100%;
+    height:33%;
+    background: url(./pics/chemex.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
+}
+
+.bee-house {
+    color: whitesmoke;
+    text-align: center;
+    padding:10px;
+    font-size: 35px;
+    font-family: 'Pacifico', cursive;
+    width:100%;
+    height:33%;
+    background: url(./pics/bee-house.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
+}
+
+.v60 {
+    color: whitesmoke;
+    text-align: center;
+    padding:10px;
+    font-size: 35px;
+    font-family: 'Pacifico', cursive;
+    width:100%;
+    height:33%;
+    background: url(./pics/v60.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.address-book {
+    width: 100%;
+    background: url(./pics/pour-background.jpg);
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.address {
+    opacity: 1.0;
+    background:rgba(0, 0, 0, 0);
+    widows: 33%;
+    color:white;
+    text-shadow: 2px 2px black;
+    font-size:25px;
+    text-align:center;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background:whitesmoke;
+    height:15%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.footer img {
+    background: whitesmoke;
+    height:50px;
+    width:50px;
+    padding:5px;
+}
+
+
+/* MENU */
+
+.menu-button {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #111;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.change .menu-background {
+    left: 0%;
+    background:rgba(0, 153, 255, 0.432);
+}
+
+@media (min-width:768px) {
+    .img1 {
+        height:100%;
+        width:33%;
+        display: inline-block
+    }
+    .img2 {
+        height:100%;
+        flex:1;
+        display: inline-block
+    }
+    .img3 {
+        height:100%;
+        width:33%;
+        display: inline-block
+    }
+
+    .footer img {
+        margin:20px;
+    }
+    .menu-background {
+        width:98%;
+    }
+    .address-book {
+        flex-direction:row;
+    }
+    .methods {
+        flex-direction:row;
+        
+    }
+    .chemex {
+        height:100%;
+        width:33%;
+    }
+    .bee-house {
+        height:100%;
+        width:33%;
+    }
+    .v60 {
+        height:100%;
+        width:33%;
+    }
+}
+
+@media (max-width:625px) {
+    .logo {
+        font-size: 35;
+        transform: translate(0px, 30px)
+    }
+}
