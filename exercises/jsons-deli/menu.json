@@ -1,0 +1,62 @@
+{
+    "appetizers": [
+        {
+            "name":"soup",
+            "ingredients":["chicken", "chicken stock", "mixed veggies", "noodles"],
+            "description": "chicken noodle"
+        },
+        {
+            "name":"salad",
+            "ingredients":["lettice", "tomato", "ranch dressing"],
+            "description": "garden salad"
+        }
+    ],
+    "cold sandwiches" :[
+        {
+            "name":"italian",
+            "ingredients":[],
+            "description": "Italian Meats Sandwich"
+        },
+        {
+            "name":"turkey",
+            "ingredients":[],
+            "description":"Turkey Sandwich"
+        }
+    ],
+    "hot sandwiches" :[
+        {
+            "name":"Meatball",
+            "ingredients":[],
+            "description": "Meatball Sub Sandwich"
+        },
+        {
+            "name":"chicken parm",
+            "ingredients":[],
+            "description":"Chicken Parmesean Sandwhich w/ Marinara"
+        }
+    ],
+    "desserts" :[
+        {
+            "name":"cheesecake",
+            "ingredients":["strawberrys", "cheesecake fill", "graham cracker crust"],
+            "description": "strawberry cheesecake"
+        },
+        {
+            "name":"ice cream",
+            "ingredients":["milk", "vannila", "cream", "choclate"],
+            "description":"Chocolate Ice Cream served in a dish"
+        }
+    ],
+    "drinks":[
+        {
+            "name":"soda",
+            "ingredients":["carbonated water", "citric acid", "sugar", "artificial flavoring"],
+            "description": "cherry soda"
+        },
+        {
+            "name":"coffee",
+            "ingredients":["coffee beans","filtered water"],
+            "description":"Single Origin Organic Black Coffee"
+        }
+    ]
+}
