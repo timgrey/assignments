@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    background: lightgray;
+}
+
+h1 {
+    margin: 30px;
+}
+
+.body-wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+}
+
+.form {
+    margin-bottom:20px;
+}
+
+
+#output {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background:lightcyan;
+    width: 960px;
+}
+
+#output div {
+    padding:10px;
+    margin: 20px;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    color: green;
+
+}
+
+#output button {
+    color:red;
+}
+
+.completed {
+    text-decoration: line-through;
+    color:red;
+}

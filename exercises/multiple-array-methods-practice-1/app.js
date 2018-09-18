@@ -32,8 +32,8 @@ var peopleArray = [
 
   function sortedOfAge(arr){
     arr = arr.filter( x => x.age > 17)
-    arr = arr.sort( (a,b) => a.lastName.charCodeAt(0) - b.lastName.charCodeAt(0));
-    return arr.map(x => x = "<li>" + x.firstName + " " + x.lastName + " is " + x.age + "<li>" )
+    arr = arr.sort( (a,b) => a.lastName.localeCompare(b.lastName));
+    return arr.map(x => x = "<li>" + x.firstName + " " + x.lastName + " is " + x.age + "</li>" )
   }
 
   console.log(sortedOfAge(peopleArray));
