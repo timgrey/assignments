@@ -1,7 +1,11 @@
 * {
     margin:0;
     text-align:center;
-    background: rgb(160, 160, 160);
+    background: -o-linear-gradient(
+    -90deg,
+    lightblue,
+    black
+    )
 }
 
 body {
