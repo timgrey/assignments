@@ -331,6 +331,8 @@
         justify-self: center;
     }
     .c3{
+        align-items: center;
+        justify-items: center;
         width: 800px;
     }
 }
