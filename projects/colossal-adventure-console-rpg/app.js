@@ -6,7 +6,7 @@ var rs = require("readline-sync")
 //FUNCTIONS
 
 function monster() {
-    this.attack = (Math.floor((Math.random() * 50) + 10)),
+    this.attack = (Math.floor((Math.random() * 39) + 10)),
     this.health = (Math.floor((Math.random() * 51) + 50))
 }
 
@@ -23,7 +23,7 @@ function getEnemyName() {
 
 function drawRoom() {
     var room = ""
-    for (var a = 1; a <= (maxY+4); a++) {
+    for (var a = 1; a <= (maxY*2)+1; a++) {
     room += "\n\t"
         for (var z = 1; z < (maxX+2); z++) {
             if (a%2 !== 0 && z === maxX) {
@@ -46,9 +46,9 @@ function drawRoom() {
 }
 
 function door(haveKey) {
-    console.log("\nYou can't move that way. There is a locked door\n")
+    console.log("\n\n\n\n\n\n\nYou can't move that way. There is a locked door\n\n\n")
     if (haveKey) {
-        if (rs.keyInYN('\tDo you want to unlock it?')) {
+        if (rs.keyInYN('\t\n\nDo you want to unlock it?')) {
             console.log("\n\t\tCONGRATS YOU ESCAPED!!!\n")
             return false;
         } else { 
@@ -105,7 +105,7 @@ function fightSequence() {
             console.log(`\nYour Health Is At ${+my.stats.health}/${my.inventory.shield ? 115 : 100} Hit Points\n`)
             var options = [ " Fight", " Run", " Use Potion ", " Succumb"]
             var i = rs.keyInSelect(options, "What would you like to do?");
-
+            console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 //FIGHT
             if ( i === 0) {
                 if (Math.random() < 0.25) {
@@ -208,8 +208,8 @@ function fightSequence() {
 
 //VARIABLES
 
-var maxX = +Math.floor((Math.random() * 8) + 3) //highest X corrdinate possible of room
-var maxY = +Math.floor((Math.random() * 3) + 3) //highest Y corrdinate possible of room
+var maxX = +Math.floor((Math.random() * 2) + 3) //highest X corrdinate possible of room
+var maxY = +Math.floor((Math.random() * 2) + 3) //highest Y corrdinate possible of room
 
 var myLocation = [ getFloorLocation(maxX), getFloorLocation(maxY) ] // x an y coordinates of your location
 var doorLocation = getWallLocation(maxX, maxY) //[x, y] coordinates of door location
@@ -239,16 +239,18 @@ var my = {
 
 //MAIN PROGRAM
 
-console.log("\n\t*******************************\n\t*** Welcome to Escape Room! ***\n\t*******************************\n")
+console.log("\n\t\t\t   *******************************\n\t\t\t   *** Welcome to Escape Room! ***\n\t\t\t   *******************************\n")
 console.log("\n\t\t You are in a room with locked door somewhere on the wall.\n ")
-console.log("\tYou must find the horrors that haunt this room and defeat them to find the key. \n ")
-console.log("\tAll you have with you is a strange map that shows you were you are in the room")
-console.log("\n*******************************************************************************************************\n")
+console.log("\tYou must fight the monsters that haunt this room to find the key!!!!\n ")
+console.log("\tAll you have with you is a strange map that shows you were you are in the room\n")
+console.log("\tThe room is not very well lit, so you must feel the walls to find the door")
+console.log("\n*********************************************************************************************\n")
 
 var userName = rs.question('May I have your name? ');
 console.log(`\nHello ${userName}, prepare to die!\n`)
 let sgo = ['continue'];
 var x = rs.keyInSelect(sgo, "Press 1 to continue...");
+console.log("\n\n\n\n\n\n\n\n")
 
 while (doorLocked) {
     console.log(drawRoom());
@@ -260,49 +262,49 @@ while (doorLocked) {
     if (i === 0) {
         if (1 < myY) {
             myY = myY - 1;
-            console.log("\n ^ You moved forwards")
+            console.log("\n\n\n\n\n\n ^ You moved forwards\n\n")
             console.log("\nMylocation: " + myX + "," + myY);
             fightSequence();
         } else if (doorX === myX && doorY === myY) {
             doorLocked = door(my.inventory.key);
         } else {
-            console.log("\nYou can't move that way. There is a wall in the way")
+            console.log("\n\n\n\n\n\n\nYou can't move that way. There is a wall in the way\n\n")
         }
 
     } else if (i === 1) {
         if (maxY > myY) {
             myY = myY + 1;
-            console.log("\n !^ You moved backwards")
+            console.log("\n\n\n\n\n\n !^ You moved backwards\n\n")
             console.log("\nMylocation: " + myX + "," + myY);
             fightSequence();
         } else if (doorX === myX && doorY === myY) {
             doorLocked = door(my.inventory.key);
         } else {
-            console.log("\nYou can't move that way. There is a wall in the way")
+            console.log("\n\n\n\n\n\n\nYou can't move that way. There is a wall in the way\n\n")
         }
         
     } else if (i === 2) {
         if (1 < myX) {
             myX = myX - 1;
-            console.log("\n <<< You moved left")
+            console.log("\n\n\n\n\n\n <<< You moved left\n\n")
             console.log("\nMylocation: " + myX + "," + myY);
             fightSequence();
         } else if (doorX === myX && doorY === myY) {
             doorLocked = door(my.inventory.key)
         } else {
-            console.log("\nYou can't move that way. There is a wall in the way")
+            console.log("\n\n\n\n\n\n\nYou can't move that way. There is a wall in the way\n\n")
         }
 
     } else if (i === 3) {
         if (maxX > myX) {
             myX = myX + 1;
-            console.log("\nYou moved right >>>")
+            console.log("\n\n\n\n\n\nYou moved right >>>\n\n")
             console.log("\nMylocation: " + myX + "," + myY);
             fightSequence();
         } else if ((doorX === myX) && (doorY === myY)) {
             doorLocked = door(my.inventory.key)
         } else {
-            console.log("\nYou can't move that way. There is a wall in the way")
+            console.log("\n\n\n\n\n\n\nYou can't move that way. There is a wall in the way\n\n")
         }
 
     } else if (i === 4) {

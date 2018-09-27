@@ -1,0 +1,15 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 24pt;
+}
+
+body {
+    background: url(./notepad-bg.jpg);
+    background-size: cover;
+}
+
+input[type="checkbox" i] {
+    color:red;
+}
