@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.zm101 {
+    display: grid;
+    grid-template-rows: repeat (5, 1fr);
+    grid-template-columns: 1fr 
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 70px;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100vw;
+    height: 240px;
+    background: url(./images/gardenbg.jpg);
+    background-size: cover;
+    color: #ffffffee;
+    border-top: 10px solid black;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.header {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    font-size: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    opacity: 0.7;
+    margin-bottom: 16px;
+}
+
+.header h1 {
+    font-size: 2.1em;
+}
+
+.header h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    color: #ffffff94;
+    font-size: 120%;
+    margin-top: 7px;
+}
+
+.nav {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    color: #ffffffdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70%;
+    background: #ffffff1f
+}
+
+.main {
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.main .section {
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main h2 {
+    font-size: 1.3rem;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.main p {
+    font-family: 'Libre Baskerville', serif;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 21pt;
+    font-size: .88rem;
+}
+
+.greenbg {
+    background: rgba(138, 188, 159, 0.5)
+}
+
+.footer {
+    font-family: 'Libre Baskerville', serif;
+    display: grid;
+    grid-template-rows: 1fr 110px;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100vw;
+    height: 40vh;
+    background: url(./images/koibg.jpg);
+    background-size: cover;
+}
+
+.by {
+    grid-column: 1/ 2;
+    grid-row: 1 / 2;
+
+    color: rgba(255, 255, 255, 0.685);
+    font-size: 150%;
+    margin: auto;
+    text-align: center;
+    line-height: 30pt;
+}
+
+.by span {
+    font-style: none;
+    color: rgba(176, 197, 185, 0.836);
+    font-style: italic;
+    font-size: 90%;
+}
+
+.socialmedia {
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+    background: #134347;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialmedia img {
+    opacity: .7;
+    padding: 10px;
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: 1.1fr .8fr .8fr 1.1fr;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 40vh;
+    color: #325050;
+    background: rgba(138, 188, 159, 0.14)
+}
+
+h3 {
+    font-size: 100%;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.projects p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 80%;
+    color: #325050dd;
+    line-height: 20pt
+}
+
+.projectlist {
+    border-top: solid 1px #dad7d7;
+    padding: 15px;
+}
+
+.projects span {
+    font-family: 'Libre Baskerville', serif;
+    color: #c0cac3;
+    font-style: italic;
+}
+
+.resources {
+    display: grid;
+    grid-template-rows: 1.1fr .95fr .95fr;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 20vh;
+}
+
+.resources-list {
+    border-top-color: #555;
+    padding: 10px;
+    color: #325050f1;
+}
+
+.row3 {
+    border-top: #555;
+    grid-column: 1 / 3;
+}
+
+@media (min-width:1000px) {
+    .zm101 {
+        grid-template-columns: 1fr 450px;
+    }
+    .header-wrapper {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+
+    .main {
+        grid-row: 2/5;
+        grid-column: 1/2;
+    }
+
+    .footer {
+        grid-row: 5/6;
+        grid-column: 1/3;
+    }
+
+    .projects {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        height: 887px;
+    }
+
+    .resources {
+        grid-row: 3/4;
+        grid-column: 2/3;
+        height: 887px;
+    }
+
+    .header-wrapper {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 450px;
+    }
+
+    .header {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .nav {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        background: #00000018;
+    }
+
+    .nav h2 {
+        padding: 25px;
+        background: #ffffff1a;
+    }
+
+}
