@@ -37,21 +37,30 @@ export default class getCards extends Component {
 
     }
 
-    draw() {
-        this.setState(prevState => {
-            prevState.deck.unshift(prevState.currentCard.pop())
-            prevState.currentCard.push(prevState.deck.pop())
-        })
+
+    draw(prevState) {
+        prevState.deck.unshift(prevState.currentCard.pop())
+        prevState.currentCard.push(prevState.deck.pop())
+        return prevState
     }
 
-    moveCard(origin, destination) {
+    // handleDiscard (origin, dest){
+    //     return (e)=>{
+    //         // handle event here
+    //     }
+    // }
+
+    moveCard(origin, destination, validator) {
         this.setState(prevState => {
             prevState[destination].push(prevState[origin].pop())
+            // validate else return original state
         })
     }
 
     fixCards(deck) {
-        deck.map(function (card) {
+        return deck.map(function (card) {
+
+            //Assignes Numerical Values to Ace,King,Queen, and Jacks
             if (card.value === "ACE") {
                 card.value = "1"
             } else if (card.value === "KING") {
@@ -61,6 +70,8 @@ export default class getCards extends Component {
             } else if (card.value === "JACK") {
                 card.value = "11"
             }
+
+            //Color Codes Cards
             if (card.suit === "DIAMONDS") {
                 card.color = "red"
             } else if (card.suit === "HEARTS") {
@@ -70,9 +81,12 @@ export default class getCards extends Component {
             } else if (card.suit === "CLUBS") {
                 card.color = "black"
             }
+
+            //Assigns a flipped status of card for displaying purposes.
+            card.flipped = false;
+
             return card
         })
-        return deck
     }
 
     dealCards(prevState) {
@@ -82,25 +96,41 @@ export default class getCards extends Component {
         this.fixCards(prevState.deck)
 
         //Deals Cards into piles represented by Arrays
+        //Flips last card in play piles over
+
         prevState.playPile1.push(prevState.deck.pop())
+        prevState.playPile1[prevState.playPile1.length-1].flipped = true
+
         while (prevState.playPile2.length < 2) {
             prevState.playPile2.push(prevState.deck.pop())
         }
+        prevState.playPile2[prevState.playPile2.length-1].flipped = true
+
         while (prevState.playPile3.length < 3) {
             prevState.playPile3.push(prevState.deck.pop())
         }
+        prevState.playPile3[prevState.playPile3.length-1].flipped = true
+
         while (prevState.playPile4.length < 4) {
             prevState.playPile4.push(prevState.deck.pop())
         }
+        prevState.playPile4[prevState.playPile4.length-1].flipped = true
+
         while (prevState.playPile5.length < 5) {
             prevState.playPile5.push(prevState.deck.pop())
         }
+        prevState.playPile5[prevState.playPile5.length-1].flipped = true
+
         while (prevState.playPile6.length < 6) {
             prevState.playPile6.push(prevState.deck.pop())
         }
+        prevState.playPile6[prevState.playPile6.length-1].flipped = true
+
         while (prevState.playPile7.length < 7) {
             prevState.playPile7.push(prevState.deck.pop())
         }
+        prevState.playPile7[prevState.playPile7.length-1].flipped = true
+
         prevState.currentCard.push(prevState.deck.pop())
 
         //Returns updated state
@@ -109,30 +139,41 @@ export default class getCards extends Component {
 
 
 
-    getDeck(url) {
-        const DeckRequest = () => axios.get(url).then(response => response.data.cards);
+    getDeck() {
+        const deckRequest = () => axios.get(newDeckUrl).then(response => response.data.cards);
 
-        return axios.get(shuffleDeckUrl).then(DeckRequest())
+        return axios.get(shuffleDeckUrl).then(deckRequest)
     }
 
     handleNewDeck() {
-        return this.getDeck(newDeckUrl).then(deck => this.setState({ deck }))
+        return this.getDeck().then(deck => this.setState({ deck }))
     }
 
     dealDeck() {
-        this.handleNewDeck().then(this.setState(prevState => this.dealCards(prevState)))
-
+        return this.handleNewDeck().then(() => this.setState(prevState => this.dealCards({ ...prevState })))
     }
 
     componentDidMount() {
         this.dealDeck()
+            .then (response => {
+                this.setState({loading:false, err:null})
+            })
+            .catch(err => this.setState({loading:false, err: {message: "Error 404: You suck at react"}}))
+        // window.addEventListener("hover", this.handleDiscard())
     }
 
     render() {
-
+        const {loading, err} = this.state
         return (
             <div>
-                <DisplayCards {...this.state} />
+            {loading ?
+                    <div>...Loading</div>
+                    :
+                    err ?
+                        <p>{err.message}</p>
+                        :
+                        <DisplayCards {...this.state} />
+                        }
             </div>
         )
     }
