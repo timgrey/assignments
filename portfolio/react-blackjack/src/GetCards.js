@@ -298,8 +298,8 @@ export default class getCards extends Component {
                         :
                         <div className="buttons">
                             <div>
-                                <button onClick={this.dealersTurn}>Stand</button>
-                                <button onClick={this.playersTurn}>Hit</button>
+                                <button className= "stand" onClick={this.dealersTurn}>Stand</button>
+                                <button className= "hit" onClick={this.playersTurn}>Hit</button>
                             </div>
                         </div>
                     }
