@@ -181,11 +181,12 @@ export default class getCards extends Component {
         if (prevState.wallet < 10 && prevState.gameOver) {
             prevState.wallet = 990
             prevState.bet = 10
+            prevState.gameOver = false;
         }
 
         if (prevState.bet < 10) {
             prevState.wallet -= 10
-            prevState.bet = 10 
+            prevState.bet = 10
         }
         prevState.dealerCards = []
         prevState.playerCards = []
@@ -270,45 +271,46 @@ export default class getCards extends Component {
     render() {
         const { loading, err, roundOver, wallet, bet } = this.state
         return (
-            <div className="app">
-                {loading ?
-                    <div>...Loading</div>
-                    :
-                    err ?
-                        <p>{err.message}</p>
+            <div className="body-wrapper">
+                <div className="app">
+                    {loading ?
+                        <div>...Loading</div>
                         :
-                        <DisplayCards {...this.state} />
-                }
+                        err ?
+                            <p>{err.message}</p>
+                            :
+                            <DisplayCards {...this.state} />
+                    }
 
-                {roundOver ?
-                    <div className="bet-buttons">
-                        <div className="bet">
-                            <button onClick={this.handleBet(-1)}>MIN</button>
-                            <button onClick={this.handleBet(10)}>$10</button>
-                            <button onClick={this.handleBet(50)}>$50</button>
-                            <button onClick={this.handleBet(100)}>$100</button>
-                            <button onClick={this.handleBet(wallet)}>MAX</button>
+                    {roundOver ?
+                        <div className="bet-buttons">
+                            <div className="bet">
+                                <button onClick={this.handleBet(-1)}>MIN</button>
+                                <button onClick={this.handleBet(10)}>$10</button>
+                                <button onClick={this.handleBet(50)}>$50</button>
+                                <button onClick={this.handleBet(100)}>$100</button>
+                                <button onClick={this.handleBet(wallet)}>MAX</button>
+                            </div>
+                            <div className="deal">
+                                <button onClick={this.newRound}>Deal</button>
+                            </div>
                         </div>
-                        <div className="deal">
-                            <button onClick={this.newRound}>Deal</button>
+                        :
+                        <div className="buttons">
+                            <div>
+                                <button onClick={this.dealersTurn}>Stand</button>
+                                <button onClick={this.playersTurn}>Hit</button>
+                            </div>
                         </div>
-                    </div>
-                    :
-                    <div className="buttons">
-                        <div>
-                            <button onClick={this.dealersTurn}>Stand</button>
-                            <button onClick={this.playersTurn}>Hit</button>
-                        </div>
-                    </div>
-                }
+                    }
 
-                <div className="money">
-                    <div className="currentBet">Current Bet: ${bet}</div>
-                    <div className="wallet">${wallet}</div>
+                    <div className="money">
+                        <div className="currentBet">Current Bet: ${bet}</div>
+                        <div className="wallet">${wallet}</div>
+                    </div>
+
                 </div>
-
             </div>
-
         )
     }
 }

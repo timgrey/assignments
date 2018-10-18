@@ -1,7 +1,21 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    transition-timing-function: 1s ease-in;
+}
+
+.home-bg {
+    background: url("./images/landscape.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:8vw;
+    font-family: 'Pacifico', cursive;
+    color: whitesmoke;
 }
 
 body {
