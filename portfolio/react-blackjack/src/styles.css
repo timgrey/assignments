@@ -16,6 +16,8 @@
     font-size: 8vw;
     font-family: 'Pacifico', cursive;
     color: whitesmoke;
+    position: absolute;
+    z-index: 3;
 }
 
 body {
@@ -186,7 +188,7 @@ div img {
 
 
 
-@media (max-width:1236px) {
+@media (max-width:1100px) {
     .app {
         background-size: 700px auto;
         width: 700px;

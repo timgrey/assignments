@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DisplayCards from "./DisplayCards"
 import axios from "axios";
+import Home from "./Home"
 
 const shuffleDeckUrl = `https://vschool-cors.herokuapp.com?url=https://deckofcardsapi.com/api/deck/0xbbumymhgwo/shuffle/
 `
@@ -80,7 +81,7 @@ export default class getCards extends Component {
                 prevState.dealerAces++
             }
             prevState.dealersCardsValue += Number(prevState.dealerCards[prevState.dealerCards.length - 1].value)
-            if (prevState.dealersCardsValue > 16 && prevState.dealerAces > 0) {
+            if (prevState.dealersCardsValue > 21 && prevState.dealerAces > 0) {
                 prevState.dealersCardsValue -= 10
                 prevState.dealerAces--
             }
@@ -204,7 +205,11 @@ export default class getCards extends Component {
         while (prevState.playerCards.length < 2) {
             prevState.playerCards.push(prevState.deck.pop())
             if (prevState.playerCards[prevState.playerCards.length - 1].value === "11") {
-                prevState.playerAces++
+                if (prevState.playerAces > 1) {
+                    prevState.playerCards[1].value = "1"
+                } else {
+                    prevState.playerAces++
+                }
             }
             prevState.playerCards[prevState.playerCards.length - 1].flipped = true;
             prevState.playersCardsValue += Number(prevState.playerCards[prevState.playerCards.length - 1].value)
@@ -274,7 +279,7 @@ export default class getCards extends Component {
             <div className="body-wrapper">
                 <div className="app">
                     {loading ?
-                        <div>...Loading</div>
+                        <Home />
                         :
                         err ?
                             <p>{err.message}</p>
