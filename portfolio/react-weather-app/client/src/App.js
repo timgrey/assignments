@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+// import axios from "axios"
+import Home from "./Home"
+import Login from "./Login"
 
-class App extends Component {
+
+export default class getCards extends Component {
+  constructor() {
+    super();
+    this.state = {
+      authenticated:false,
+      homeLat:null,
+      homeLon:null
+    };
+
+  }
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    const {authenticated} = this.state
+    return(
+      <div className="home">
+        {authenticated ? 
+          <Home {...this.state}/>
+          :
+          <Login />
+        }
       </div>
-    );
+    )
   }
 }
-
-export default App;
