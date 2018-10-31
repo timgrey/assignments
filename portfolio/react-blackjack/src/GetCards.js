@@ -269,7 +269,7 @@ export default class getCards extends Component {
             .then(response => {
                 this.setState({ loading: false, err: null })
             })
-            .catch(err => this.setState({ loading: false, err: { message: "Error 404: You suck at react" } }))
+            .catch(err => this.setState({ loading: false, err: { message: "Error 404" } }))
     }
 
 

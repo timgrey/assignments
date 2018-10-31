@@ -1,30 +1,14 @@
-import React, { Component } from 'react'
-// import axios from "axios"
+import React from 'react'
+
 import Home from "./Home"
 import Login from "./Login"
 
+const authenticated = true
 
-export default class getCards extends Component {
-  constructor() {
-    super();
-    this.state = {
-      authenticated:false,
-      homeLat:null,
-      homeLon:null
-    };
-
-  }
-
-  render() {
-    const {authenticated} = this.state
-    return(
-      <div className="home">
-        {authenticated ? 
-          <Home {...this.state}/>
-          :
-          <Login />
-        }
-      </div>
-    )
-  }
+export default function App() {
+  return (
+    <div className="home">
+        {authenticated ? <Home /> : <Login />}
+    </div>
+  )
 }
