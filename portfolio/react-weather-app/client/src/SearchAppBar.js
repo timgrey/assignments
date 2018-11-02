@@ -2,15 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-
 import { Consumer } from "./Home";
+import Menu from "./Menu";
 
 const styles = theme => ({
     root: {
@@ -80,9 +78,7 @@ function SearchAppBar(props) {
                 <div className={classes.root}>
                     <AppBar position="static">
                         <Toolbar>
-                            <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-                                <MenuIcon />
-                            </IconButton>
+                           <Menu handleMenuLogin={props.handleMenuLogin} goToHomeWeather={props.goToHomeWeather}/>
                             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
                                 Acme Weather
                              </Typography>
@@ -92,6 +88,8 @@ function SearchAppBar(props) {
                                     <SearchIcon />
                                 </div>
                                 <InputBase
+                                    onKeyUp={props.handleSubmit}
+                                    onChange={props.handleChange}
                                     placeholder="Search…"
                                     classes={{
                                         root: classes.inputRoot,

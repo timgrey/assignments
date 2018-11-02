@@ -60,11 +60,16 @@ function SignIn(props) {
             Sign in
           </Typography>
 
-          <form className={classes.form}>
+          <form className={classes.form} onSubmit={e => e.preventDefault()}>
 
             <FormControl margin="normal" required fullWidth>
               <InputLabel htmlFor="username">Username</InputLabel>
-              <Input id="username" name="username" autoComplete="username" autoFocus />
+              <Input
+                id="username"
+                name="username"
+                autoComplete="username"
+                autoFocus
+                onChange={props.handleUsernameFieldChange} />
             </FormControl>
 
             <FormControl margin="normal" required fullWidth>
@@ -73,10 +78,12 @@ function SignIn(props) {
                 name="password"
                 type="password"
                 id="password"
+                onChange={props.handlePasswordFieldChange}
               />
             </FormControl>
-        
+
             <Button
+              onClick={props.handleLogin}
               type="submit"
               fullWidth
               variant="contained"
@@ -84,6 +91,17 @@ function SignIn(props) {
               className={classes.submit}
             >
               Sign in
+            </Button>
+
+            <Button
+              onClick={props.handleNewUser}
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              New User
             </Button>
 
           </form>
