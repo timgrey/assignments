@@ -3,11 +3,11 @@
 }
 
 body {
-    background: #e2e8dd
+    background:#cfdce6
 }
 
 hr {
-    background: #697268;
+    background: #03396c;
     width: 70%;
 }
 
@@ -21,20 +21,20 @@ hr {
 }
 
 .location {
-    color: #697268;
+    color: #03396c;
     font-size: 30pt;
     text-align: center;
     padding: 15px;
 }
 
 .weather-icon-temp-summary {
-    color: #697268;
+    color: #03396c;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     height: 200px;
     width: 100%;
-    border: 3pt solid #aac0aa;
+    border: 3pt solid #005b96	;
     border-radius: 10pt;
     display: flex;
     flex-direction: row;
@@ -91,17 +91,18 @@ hr {
     height: 10%;
 }
 
+
 .weekly-forcast {
     padding: 10px;
     font-size: 18pt;
     text-align: center;
-    color: #697268;
+    color: #03396c;
 
 }
 
 .hourly-forcast {
     box-sizing: border-box;
-    border: 3pt solid #aac0aa;
+    border: 3pt solid #005b96	;
     border-radius: 10pt;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -114,9 +115,9 @@ hr {
 
 
 .hourly-forcast div {
-    color: #e9806e;
-    border-right: 1pt solid #aac0aa;
-    border-left: 1pt solid #aac0aa;
+    color: #6497b1;
+    border-right: 1pt solid #005b96	;
+    border-left: 1pt solid #005b96	;
     font-size: 12pt;
     display: flex;
     align-items: center;
@@ -125,7 +126,7 @@ hr {
 
 .daily-forcast {
     box-sizing: border-box;
-    border: 3pt solid #aac0aa;
+    border: 3pt solid #005b96;
     border-radius: 10pt;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
@@ -136,9 +137,9 @@ hr {
 }
 
 .daily-forcast div {
-    color: #e9806e;
-    border-right: 1pt solid #aac0aa;
-    border-left: 1pt solid #aac0aa;
+    color: #6497b1;
+    border-right: 1pt solid #005b96	;
+    border-left: 1pt solid #005b96	;
     font-size: 12pt;
     display: flex;
     align-items: center;
@@ -150,11 +151,15 @@ hr {
 }
 
 .title {
-    color: #697268;
+    color: #03396c;
     text-align:center;
     padding:5px;
     display:flex;
     justify-content: center;
+}
+
+.title2 {
+    margin-top:10px;
 }
 
 

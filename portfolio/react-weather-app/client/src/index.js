@@ -11,7 +11,7 @@ const customStyles = {
             main: "#e9806e",
         },
         secondary: {
-            main: "#4e5340"
+            main: "#011f4b"
         } 
     }
 }

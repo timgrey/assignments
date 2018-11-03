@@ -16,7 +16,21 @@ const moment = require('moment-timezone');
 
 
 
-function DisplayWeather({ forcast, currentForcast, dailyForcast, hourlyForcast, geocodedLoc, handleChange, handleSubmit, handleMenuLogin, homeWeather, searchText, handleSetHomeWeather, goToHomeWeather }, radar) {
+function DisplayWeather({ 
+    forcast, 
+    currentForcast, 
+    dailyForcast, 
+    hourlyForcast, 
+    geocodedLoc, 
+    handleChange, 
+    handleSubmit, 
+    handleMenuLogin, 
+    homeWeather, 
+    searchText, 
+    handleSetHomeWeather, 
+    goToHomeWeather,
+    handleClearHomeWeather,
+ }, radar) {
 
 
     const iconPicker = (icon, fontSize) => {
@@ -63,7 +77,7 @@ function DisplayWeather({ forcast, currentForcast, dailyForcast, hourlyForcast, 
                 <div className="front-page">
                     <SearchAppBar handleChange={handleChange} handleSubmit={handleSubmit} handleMenuLogin={handleMenuLogin} goToHomeWeather={goToHomeWeather}/>
                     <div className="location">
-                        {geocodedLoc.Address.City}<span>{homeWeather.toLowerCase() === searchText.toLowerCase() ? <Favorite/> : <UnFavorite onClick={handleSetHomeWeather}/>}</span>
+                        {geocodedLoc.Address.City}, {geocodedLoc.Address.State}<span>{homeWeather.toLowerCase() === searchText.toLowerCase() ? <Favorite onClick={handleClearHomeWeather}/> : <UnFavorite onClick={handleSetHomeWeather}/>}</span>
                     </div>
                     {weatherIconTempSummary(currentForcast.icon, currentForcast.temperature, currentForcast.summary)}
                     <hr />
@@ -94,7 +108,7 @@ function DisplayWeather({ forcast, currentForcast, dailyForcast, hourlyForcast, 
                         <div>{Math.floor(hourlyForcast.data[12].temperature)}°</div>
                         <div>{Math.floor(hourlyForcast.data[15].temperature)}°</div>
                     </div>
-                    <div className="title">WEEKLY</div>
+                    <div className="title title2">WEEKLY</div>
                     <div className="daily-forcast">
                         <div>{getTime(dailyForcast.data[0].time, "dd")}</div>
                         <div>{getTime(dailyForcast.data[1].time, "dd")}</div>
@@ -132,7 +146,7 @@ function DisplayWeather({ forcast, currentForcast, dailyForcast, hourlyForcast, 
 
                     </div>
                 </div>
-                <div className="title"> PRECIPITATION RADAR</div>
+                <div className="title title2">WEATHER MAP</div>
                 <div id="radar" className="radar" ref={radar}></div>
                 <a className="title" href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
             </div>

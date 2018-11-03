@@ -61,6 +61,8 @@ export default class Home extends Component {
         this.handleMenuLogin = this.handleMenuLogin.bind(this)
         this.goToHomeWeather = this.goToHomeWeather.bind(this)
         this.handleSetHomeWeather = this.handleSetHomeWeather.bind(this)
+        this.handleClearHomeWeather = this.handleClearHomeWeather.bind(this)
+
     }
 
     goToHomeWeather() {
@@ -79,6 +81,16 @@ export default class Home extends Component {
             .then(response => this.setState({ homeWeather: response.data })
             )
     }
+
+    handleClearHomeWeather(e) {
+        axios.put(setHomeWeatherURL, {
+            username: this.state.username,
+            homeWeather: ""
+        })
+            .then(response => this.setState({ homeWeather: response.data })
+            )
+    }
+
 
     handleNewUser(e) {
         axios.post(newUserURL, {
@@ -181,7 +193,7 @@ export default class Home extends Component {
         return this.weather()
             .then(response => {
                 this.setState({ loading: false, err: null }, () => {
-                    const weatherScript = `<script type="text/javascript"src="https://darksky.net/map-embed/@radar,${this.state.geocodedLoc.NavigationPosition[0].Latitude},${this.state.geocodedLoc.NavigationPosition[0].Longitude},8.js?embed=true&timeControl=false&fieldControl=true&defaultField=radar" async></script>`;
+                    const weatherScript = `<script class="radar-map" type="text/javascript"src="https://darksky.net/map-embed/@radar,${this.state.geocodedLoc.NavigationPosition[0].Latitude},${this.state.geocodedLoc.NavigationPosition[0].Longitude},8.js?embed=true&timeControl=false&fieldControl=true&defaultField=radar" async></script>`;
                     postscribe(this.radar.current, weatherScript)
                 })
             })
@@ -201,6 +213,7 @@ export default class Home extends Component {
                                 handleSubmit={this.handleSubmit}
                                 handleMenuLogin={this.handleMenuLogin}
                                 handleSetHomeWeather={this.handleSetHomeWeather}
+                                handleClearHomeWeather={this.handleClearHomeWeather}
                                 goToHomeWeather={this.goToHomeWeather}
                             />
                         </WeatherMounter>
